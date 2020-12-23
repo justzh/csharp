@@ -47,6 +47,7 @@ Good layout uses formatting to emphasize the structure of your code and to make 
 The following sections describe practices that the C# team follows to prepare code examples and samples.
 
 ### String Data Type
+
 - Use string interpolation to concatenate short strings, as shown in the following code.
 string displayName = $"{nameList[n].LastName}, {nameList[n].FirstName}";
 - To append strings in loops, especially when you are working with large amounts of text, use a StringBuilder object.
@@ -82,6 +83,8 @@ string displayName = $"{nameList[n].LastName}, {nameList[n].FirstName}";
 
 - Do not rely on the variable name to specift the type of the variable. It might not be correct.
 
+- Avoid the use of `var` in place of dynamic.
+
 - Use implicit typing to determine the type of the loop variable in for loops.
 
     ```
@@ -94,7 +97,7 @@ string displayName = $"{nameList[n].LastName}, {nameList[n].FirstName}";
     Console.WriteLine("tra" + manyPhrases);
     ```
 
-- Do not use implicit typing to determine the type of the loop variable in foreach loops.
+- Do not use implicit typing to determine the type of the loop variable in `foreach` loops.
 
     ```
     foreach (char ch in laugh)
