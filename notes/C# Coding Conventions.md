@@ -81,3 +81,27 @@ string displayName = $"{nameList[n].LastName}, {nameList[n].FirstName}";
     ```
 
 - Do not rely on the variable name to specift the type of the variable. It might not be correct.
+
+- Use implicit typing to determine the type of the loop variable in for loops.
+
+    ```
+    var phrase = "lalalalalalalalalalalalalalalalalalalalalalalalalalalalalala";
+    var manyPhrases = new StringBuilder();
+    for (var i = 0; i < 10000; ++i)
+    {
+        manyPhrases.Append(phrase);
+    }
+    Console.WriteLine("tra" + manyPhrases);
+    ```
+
+- Do not use implicit typing to determine the type of the loop variable in foreach loops.
+
+    ```
+    foreach (char ch in laugh)
+    {
+        if (ch == 'h')
+            Console.Write("H");
+        else
+            Console.Write(ch);
+    }
+    Console.WriteLine();
