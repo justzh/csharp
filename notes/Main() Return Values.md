@@ -37,4 +37,14 @@ When a program is executed in Windows, any value returned from the `Main` functi
 
 You can build the application using the dotnet CLI `dotnet build` command.
 
-Next, create a PowerShell script to run the application and display the result. Past the following code into a text file and save it as `test.ps1` in the folder that contains the project. Run the PowerShell script by typing `test.ps1` at the PowerShell prompt.
+Next, create a PowerShell script to run the application and display the result. Paste the following code into a text file and save it as `test.ps1` in the folder that contains the following code into a text file and save it as test.ps1.
+
+    if ($LastExitCode -eq 0) {
+        Write-Host "Execution succeeded"
+    } else
+    {
+        Write-Host "Execution Failed"
+    }
+    Write-Host "Return value = " $LastExitCode
+
+Run the PowerShell script by typing `test.ps1` at the PowerShell prompt.
